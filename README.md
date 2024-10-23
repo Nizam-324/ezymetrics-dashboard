@@ -21,4 +21,4 @@ Before running this project, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/ezymetrics-dashboard.git
+git clone https://github.com/Nizam-324/ezymetrics-dashboard.git
