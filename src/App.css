@@ -1,0 +1,48 @@
+.app{
+
+    .content{
+        display: flex;
+
+    }
+    header{
+        width: 80%;
+        margin: 10px auto;
+        padding: 15px 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1{
+            font-family: 'Oxanium';
+            color: #038dcd;
+            font-weight: 600;
+            font-size: 30px;
+        }
+
+        button{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 825px) {
+    .app {
+        .content{
+
+        }
+
+        header{
+            width: -webkit-fill-available;
+            margin: 0px;
+
+            button{
+                display: block;
+                border: none;
+                outline: none;
+                background-color: #fff;
+                color: #038dcd;
+            }
+        }
+    }
+}
