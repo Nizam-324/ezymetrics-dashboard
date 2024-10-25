@@ -65,7 +65,8 @@ export default function Dashboard() {
                     <p>
                         <span className="icon-data">
                             {getIconForWidget(widget.name)}{" "}
-                            {widget.id === 6
+                            {
+                                widget.id === 6
                                     ? Math.min(Math.floor(widget.data / 8), 98) // Limit to 98, remove decimal
                                     : widget.id === 7
                                     ? Math.min(Math.floor(widget.data / 8), 40) // Limit to 40, remove decimal
@@ -73,7 +74,8 @@ export default function Dashboard() {
                                     ? Math.min(Math.floor(widget.data / 5), 66) // Limit to 66, remove decimal
                                     : widget.id === 3
                                     ? Math.floor(widget.data / 8) // Just remove decimal, no limit
-                                    : widget.data // Default value if no conditions match}
+                                    : widget.data // Default value if no conditions match
+                            }
                         </span>{" "}
                         <span className="unit">{widget.unit}</span>
                     </p>
