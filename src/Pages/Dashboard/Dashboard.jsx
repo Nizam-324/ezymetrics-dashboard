@@ -66,14 +66,14 @@ export default function Dashboard() {
                         <span className="icon-data">
                             {getIconForWidget(widget.name)}{" "}
                             {widget.id === 6
-                                ? Math.min(widget.data, 96)
-                                : widget.id === 7
-                                ? Math.min(widget.data, 31)
-                                : widget.id === 5
-                                ? Math.min(widget.data, 75)
-                                : widget.id === 3
-                                ? Math.min(widget.data, 94)
-                                : widget.data}
+                                    ? Math.min(Math.floor(widget.data / 8), 98) // Limit to 98, remove decimal
+                                    : widget.id === 7
+                                    ? Math.min(Math.floor(widget.data / 8), 40) // Limit to 40, remove decimal
+                                    : widget.id === 5
+                                    ? Math.min(Math.floor(widget.data / 5), 66) // Limit to 66, remove decimal
+                                    : widget.id === 3
+                                    ? Math.floor(widget.data / 8) // Just remove decimal, no limit
+                                    : widget.data // Default value if no conditions match}
                         </span>{" "}
                         <span className="unit">{widget.unit}</span>
                     </p>
